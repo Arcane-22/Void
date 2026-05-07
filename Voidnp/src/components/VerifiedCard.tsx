@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Tick from '../assets/tick.svg'
 
 
