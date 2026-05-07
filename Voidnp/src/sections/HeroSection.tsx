@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Hero from '../assets/hero-image.svg'
 import VerifiedCard from '../components/VerifiedCard'
 

@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export type UGetProps = {
   icon: string;
