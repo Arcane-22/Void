@@ -1,6 +1,6 @@
 import Instagram from '../assets/Instagram.png'
 import Facebook from '../assets/Facebook.png'
-import LinkedIn from '../assets/Linkedin.png'
+import LinkedIn from '../assets/LinkedIn.png'
 
 const NAV_LINKS = [
   { label: "Projects", href: "/projects" },
