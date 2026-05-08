@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Logo from '../assets/Logos.svg'
 import diagonalArrow from '../assets/diagonal-arrow.svg'
 

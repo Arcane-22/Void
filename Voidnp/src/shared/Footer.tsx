@@ -42,7 +42,7 @@ function Footer() {
         <div className="footer-right">
           <nav aria-label="Site links">
             <ul className="footer-nav">
-              {NAV_LINKS.map(({ label, href }) => (
+              {NAV_LINKS.map(({ label}) => (
                 <li key={label}>
                     {label}
                 </li>
