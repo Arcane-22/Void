@@ -118,17 +118,29 @@ section{
 .hero-section{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.hero-figure {
+  flex: 0 0 auto;
 }
 
 h2{
   font-family: Inter;
   font-weight: 500;
   font-style: Medium;
-  font-size: 100px;
+  font-size: clamp(40px, 5.5vw, 100px);
   line-height: 140%;
   letter-spacing: 0%;
   text-transform: capitalize;
-  width: 1045px;  
+  max-width: 1045px;
+  width: 100%;
 }
 
 .hero-heading{
@@ -139,8 +151,9 @@ h2{
 }
 
 .hero-text p{
-  font-size: 20px;
-  width: 822px;
+  font-size: clamp(15px, 1.2vw, 20px);
+  max-width: 822px;
+  width: 100%;
   margin-top: 58px;
 }
 
@@ -149,11 +162,10 @@ figure{
 }
 
 .hero-image {
-  width: 610px;
+  width: clamp(280px, 32vw, 610px);
   height: auto;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70.4%, #000000 100%);
   border-radius: 32px;
-
 }
 
 .status-card{
@@ -244,8 +256,8 @@ figure{
   border-radius: 32px;
   border-bottom: 1px solid #0000001A;
   padding: 60px;
-  width: 970px;
-
+  max-width: 970px;
+  width: 100%;
 }
 
 #identity-bg{
@@ -264,9 +276,16 @@ figure{
   gap: 160px;
 }
 
-.journey-section h2{
-  width: 100%;
+.journey-text{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
   text-align: center;
+}
+
+.journey-text h2{
+  width: 100%;
 }
 
 .journey-heading{
@@ -358,7 +377,8 @@ color: #FE4830;
 }
 
 .why-text p{
-  width: 853px;
+  max-width: 853px;
+  width: 100%;
 }
 
 .why-card{
@@ -401,7 +421,8 @@ color: #FE4830;
 } 
 
 .whatuget-header{
-  width: 973px;
+  max-width: 973px;
+  width: 100%;
   display: flex;
   gap: 100px;
   flex-direction: column;
@@ -429,7 +450,7 @@ color: #FE4830;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  height: 437px;
+  min-height: 437px;
   background-color: #FFFFFF;
   border-radius: 32px;
   padding: 60px;
@@ -480,7 +501,8 @@ color: #FE4830;
   position: absolute;
   bottom:66%;
   right: -3%;
-  height: 911px;
+  max-height: 911px;
+  height: auto;
 }
 
 .arrow{
@@ -508,7 +530,8 @@ color: #FE4830;
 }
 
 .build-header h2{
-  width:1504px;
+  max-width: 1504px;
+  width: 100%;
 }
 
 .build-heading{
@@ -519,7 +542,8 @@ color: #FE4830;
 }
 
 .build-header p{
-  width: 853px;
+  max-width: 853px;
+  width: 100%;
 }
 
 .image-container {
@@ -561,16 +585,15 @@ footer{
 }
 
 footer h1{
-font-family: 'Luckiest Guy';
-font-weight: 400;
-font-style: Regular;
-font-size: 285px;
-line-height: 120%;
-letter-spacing: 0%;
-vertical-align: middle;
-color: #FFFFFF40;
-text-align: center;
-
+  font-family: 'Luckiest Guy';
+  font-weight: 400;
+  font-style: Regular;
+  font-size: clamp(60px, 15vw, 285px);
+  line-height: 120%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #FFFFFF40;
+  text-align: center;
 }
 
 .footer-top{
@@ -628,6 +651,3 @@ text-align: center;
   justify-content: space-between;
   align-items: center;
 }
-
-
-
