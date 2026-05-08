@@ -1,6 +1,6 @@
 import computer from "../assets/computer.svg";
 import character from "../assets/character.svg";
-import Vector from "../assets/vector.svg";
+import Vector from "../assets/Vector.svg";
 import bubble from "../assets/bubble.svg";
 import diagonalArrow from '../assets/diagonal-arrow.svg'
 
