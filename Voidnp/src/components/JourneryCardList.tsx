@@ -1,9 +1,14 @@
 import JourneyCard, { type stepsProps } from "./JourneryCard";
 
+import Icon1 from "../assets/Icon1.svg";
+import Icon2 from "../assets/Icon2.svg";
+import Icon3 from "../assets/Icon3.svg";
+import Icon4 from "../assets/Icon4.svg";
+
 const stepsData: stepsProps[] = [
   {
     number: "01",
-    icon: "src/assets/Icon1.svg",       
+    icon: Icon1,       
     iconAlt: "Create account icon",
     title: "Create Your Void Teacher Account.",
     description:
@@ -12,7 +17,7 @@ const stepsData: stepsProps[] = [
   },
   {
     number: "02",
-    icon: "src/assets/Icon2.svg",   
+    icon: Icon2, 
     iconAlt: "Professional profile icon",
     title: "Build And Complete Your Professional Profile",
     description:
@@ -21,7 +26,7 @@ const stepsData: stepsProps[] = [
   },
   {
     number: "03",
-    icon: "src/assets/Icon3.svg",  
+    icon: Icon3,
     iconAlt: "Submit documents icon",
     title: "Submit Your Documents For Verification Process.",
     description:
@@ -30,7 +35,7 @@ const stepsData: stepsProps[] = [
   },
   {
     number: "04",
-    icon: "src/assets/Icon4.svg", 
+    icon: Icon4,
     iconAlt: "Verified badge icon",
     title: "Get Verified And Use Across All Platforms",
     description:

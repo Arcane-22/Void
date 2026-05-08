@@ -1,8 +1,12 @@
 import WhyCard, {type featuresProps } from "./WhyCard";
 
+import Icon5 from "../assets/Icon5.svg";
+import Icon6 from "../assets/Icon6.svg";
+import Icon7 from "../assets/Icon7.svg";
+
 const featuresData: featuresProps[] = [
   {
-    icon: "src/assets/Icon5.svg",
+    icon: Icon5,
     iconAlt: "No repeated verification icon",
     title: "No Repeated Verification",
     description:
@@ -10,7 +14,7 @@ const featuresData: featuresProps[] = [
     isHighlighted: false,
   },
   {
-    icon: "src/assets/Icon6.svg",
+    icon: Icon6,
     iconAlt: "Faster access icon",
     title: "Faster Access To Opportunities",
     description:
@@ -18,7 +22,7 @@ const featuresData: featuresProps[] = [
     isHighlighted: true, // center card
   },
   {
-    icon: "src/assets/Icon7.svg",
+    icon: Icon7,
     iconAlt: "Credibility icon",
     title: "Stronger Professional Credibility",
     description:
