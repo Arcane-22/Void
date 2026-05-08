@@ -1,6 +1,6 @@
 import computer from "../assets/computer.svg";
 import character from "../assets/character.svg";
-import vector from "../assets/vector.svg";
+import Vector from "../assets/vector.svg";
 import bubble from "../assets/bubble.svg";
 import diagonalArrow from '../assets/diagonal-arrow.svg'
 
@@ -16,7 +16,7 @@ function BuildSection() {
         <div className="image-container">
         <img src={computer} alt="computer Image" className="computer-img"/>
         <img src={character} alt="character Image" className="character-img" />
-        <img src= {vector} alt="vector Image" className="vector-img" />
+        <img src= {Vector} alt="vector Image" className="vector-img" />
         <img src = {bubble} alt="bubble Image" className="bubble-img" />
         </div>
     </section>
