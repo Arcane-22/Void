@@ -1,27 +1,15 @@
-import Footer from "./shared/Footer"
-import NavBar from "./shared/NavBar"
-import HeroSection from "./sections/HeroSection"
-import SingleIdentity from "./sections/SingleIdentity"
-import JourneySection from "./sections/JourneySection"
-import WhySection from "./sections/WhySection"
-import WhatUGetSection from "./sections/WhatUGetSection"
-import BuildSection from "./sections/BuildSection"
+import { Routes, Route } from 'react-router-dom'
+import Home from './Home'
+import Register from './Register'
+import Login from './Login'
 
 function App() {
-
   return (
-    <>
-    <div className="container">
-    <NavBar/>
-    <HeroSection/>
-    <SingleIdentity/>
-    <JourneySection/>
-    <WhySection/>
-    <WhatUGetSection/>
-    <BuildSection/>
-    </div>
-    <Footer/>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   )
 }
 
