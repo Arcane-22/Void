@@ -1,3 +1,4 @@
+import TeacherCard from "./components/TeacherCard"
 
 function Login() {
   return (
@@ -6,18 +7,7 @@ function Login() {
             <header>
                 <img src="" alt="logo" />
             </header>
-            <div>
-                <img src="" alt="icon" />
-                <p>Stauts<strong>Verified</strong></p>
-            </div>
-            <figure>
-            <img src="/images/heroimage.jpg" alt="Gaurav Kumar Shiwakoti" />
-            <figcaption>
-                <strong>Gaurav Kumar Shiwakoti <img src="" alt="icon" /></strong>
-                <span>Void Teacher</span>
-            </figcaption>
-            </figure>
-
+          <TeacherCard />
         <h1>One Identity.<br />Verified Everywhere.</h1>
         </section>
       <section aria-label="Login form">
