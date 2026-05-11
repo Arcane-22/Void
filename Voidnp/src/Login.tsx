@@ -1,38 +1,46 @@
 import TeacherCard from "./components/TeacherCard"
+import whiteLogo from './assets/Logos_white.svg'
 
 function Login() {
   return (
-    <main>
-        <section>
-            <header>
-                <img src="" alt="logo" />
-            </header>
-          <TeacherCard />
-        <h1>One Identity.<br />Verified Everywhere.</h1>
-        </section>
-      <section aria-label="Login form">
+    <main className="login-page">
+      <div className="login-container">
 
-        <button aria-label="Close">✕</button>
+      <section className="login-left">
+        <header>
+          <img src={whiteLogo} alt="logo" />
+        </header>
 
-        <h2>Welcome Back</h2>
+        <TeacherCard className="teacher-card"/>
 
-        <form method="post" action="/login">
+        <h2>One Identity.<br />Verified Everywhere.</h2>
+      </section>
 
-          <label>Email</label>
+      <section aria-label="Login form" className="login-right">
+
+        <button aria-label="Close" className="close">✕</button>
+
+        <h3>Welcome Back</h3>
+
+        <form method="post" action="/login" className="login-form">
+
+          <label htmlFor="email">Email</label>
           <input
             id="email"
+            type="email"
             placeholder="Enter your Email"
             required
           />
 
-          <label>Password</label>
+          <label htmlFor="password">Password</label>
           <input
             id="password"
+            type="password"
             placeholder="Enter your password"
             required
           />
 
-          <div>
+          <div className="form-options">
             <label>
               <input type="checkbox" name="remember" />
               Remember me
@@ -40,20 +48,21 @@ function Login() {
             <a href="/forgot-password">Forgot password?</a>
           </div>
 
-          <button type="submit">Login</button>
+          <button type="submit">Sign In</button>
 
         </form>
 
-        <hr />
+        <div className="divider"><span>or</span></div>
 
-        <a href="/auth/google">
+        <a href="/auth/google" className="google-btn">
           <img src="/icons/google.svg" alt="" aria-hidden="true" />
-          Login with Google
+          Sign In with Google
         </a>
 
-        <p>Don't have an account? <a href="/register">Register</a></p>
+        <p>Don't have an account? <a href="/register" className="register">Register</a></p>
 
       </section>
+      </div>
     </main>
   )
 }

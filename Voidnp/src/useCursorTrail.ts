@@ -5,7 +5,7 @@ export function useCursorTrail() {
     const NUM = 20
     const BASE_COLOR = [255, 140, 0]
     const EDGE = 120
-    const INTERACTIVE = "button, a, [role='button'], input, select, textarea, label"
+    const INTERACTIVE = "button, a, input, select, textarea"
 
     const coords = { x: window.innerWidth / 2, y: window.innerHeight / 2 }
     const dots: Array<{ el: HTMLDivElement; x: number; y: number }> = []

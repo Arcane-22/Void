@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import Logo from '../assets/Logos.svg'
 import diagonalArrow from '../assets/diagonal-arrow.svg'
 
@@ -13,7 +14,7 @@ function NavBar() {
         </ul>
         <div className='nav-btn'>
             <button id="signin-btn">Sign In</button>
-            <button id="verified-btn">Get Verified<img src={diagonalArrow} /></button>
+            <Link to="/dashboard"><button id="verified-btn">Get Verified<img src={diagonalArrow} /></button></Link>
         </div>
     </nav>
   )
