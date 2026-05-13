@@ -96,3 +96,10 @@ align-items: stretch;
     max-width: 50%;
     min-width: 118px;
 }
+
+.form-section section{
+    border-radius: 16px;
+    padding: 24px;
+    background: hsl(0, 0%, 90%);
+
+}

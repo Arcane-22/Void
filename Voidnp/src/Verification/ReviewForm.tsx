@@ -5,11 +5,11 @@ type Props = {
 
 const ReviewForm = ({ onBack, data }: Props) => {
   return (
-    <section className="form-section">
+    <main className="form-section">
       <h3>Review Your Data</h3>
 
-      {/* PERSONAL */}
-      <h4>Personal</h4>
+      <section>
+      <h4>Personal Information</h4>
       <div>
         <p><b>Name:</b> {data.personal.full_name}</p>
         <p><b>Phone:</b> {data.personal.phone}</p>
@@ -18,36 +18,38 @@ const ReviewForm = ({ onBack, data }: Props) => {
         <p><b>Nationality:</b> {data.personal.nationality}</p>
         <p><b>Gender:</b> {data.personal.gender}</p>
       </div>
+      </section>
 
       {/* PROFESSIONAL */}
-      <h4>Professional</h4>
+      <section>
+      <h4>Professional Information</h4>
       <div>
         <p><b>Job Title:</b> {data.professional.job_title}</p>
         <p><b>Company:</b> {data.professional.company}</p>
       </div>
+      </section>
 
       {/* DOCUMENTS */}
-      <h4>Documents</h4>
+      <section>
+      <h4>Upload Documents</h4>
 
-      <h5>ID Files</h5>
       <ul>
         {data.documents.idFiles?.map((file: File, i: number) => (
           <li key={i}>{file.name}</li>
         ))}
       </ul>
 
-      <h5>Certificates</h5>
       <ul>
         {data.documents.certFiles?.map((file: File, i: number) => (
           <li key={i}>{file.name}</li>
         ))}
       </ul>
-
+      </section>
       <div className="form-actions">
         <button type="button" className="back" onClick={onBack}>Previous</button>
         <button type="button" className="next">Submit for Verification</button>
       </div>
-    </section>
+    </main>
   );
 };
 
