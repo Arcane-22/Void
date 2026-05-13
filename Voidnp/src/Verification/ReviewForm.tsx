@@ -7,7 +7,7 @@ const ReviewForm = ({ onBack }: Props) => {
       {/* summary goes here */}
       <div className="form-actions">
         <button type="button" className="back" onClick={onBack}>Previous</button>
-        <button type="button" className="next">Submit</button>
+        <button type="button" className="next">Submit for Verification</button>
       </div>
     </section>
   );

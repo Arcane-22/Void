@@ -9,7 +9,7 @@ const ProfessionalForm = ({ onNext, onBack }: Props) => {
       <form className="verification-form" onSubmit={(e) => { e.preventDefault(); onNext(); }}>
         <div className="form-display">
 
-          <div className="field">
+          <div className="pro-field">
             <label>Primary Subject *</label>
             <select defaultValue="">
               <option value="" disabled>Select Option</option>
@@ -19,7 +19,7 @@ const ProfessionalForm = ({ onNext, onBack }: Props) => {
             </select>
           </div>
 
-          <div className="field">
+          <div className="pro-field">
             <label>Secondary Subject</label>
             <select defaultValue="">
               <option value="" disabled>Select Option</option>
@@ -29,7 +29,7 @@ const ProfessionalForm = ({ onNext, onBack }: Props) => {
             </select>
           </div>
 
-          <div className="field"> 
+          <div className="pro-field"> 
             <label>Highest Qualification *</label>
             <select defaultValue="">
               <option value="" disabled>Select Option</option>
@@ -39,12 +39,12 @@ const ProfessionalForm = ({ onNext, onBack }: Props) => {
             </select>
           </div>
 
-          <div className="field">
+          <div className="pro-field">
             <label>Field of Study *</label>
             <input type="text" placeholder="E.g BCA" />
           </div>
 
-          <div className="field">
+          <div className="pro-field">
             <label>Years of Experience *</label>
             <select defaultValue="">
               <option value="" disabled>Select Option</option>
@@ -54,12 +54,12 @@ const ProfessionalForm = ({ onNext, onBack }: Props) => {
             </select>
           </div>
 
-          <div className="field">
+          <div className="pro-field">
             <label>Current Institution</label>
             <input type="text" placeholder="Enter institution name" />
           </div>
 
-          <div className="field">
+          <div className="pro-field">
             <label>Previous Institution</label>
             <input type="text" placeholder="Enter institution name" />
           </div>
@@ -73,7 +73,7 @@ const ProfessionalForm = ({ onNext, onBack }: Props) => {
 
         <div className="form-actions">
           <button type="button" className="back" onClick={onBack}>Previous</button>
-          <button type="submit" className="next">Submit for Verification</button>
+          <button type="submit" className="next">Next</button>
         </div>
       </form>
     </section>
