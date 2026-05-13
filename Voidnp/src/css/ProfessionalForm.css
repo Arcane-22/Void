@@ -1,0 +1,80 @@
+button{
+    border: none
+}
+
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-actions{
+    display: flex;
+    gap: 40px;
+align-items: stretch;
+}
+
+.back{
+    flex:1;
+    height: 50px;
+    border-radius: 100px;
+    padding: 8px 16px;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.next{
+    flex: 1;
+    height: 50px;
+    border-radius: 100px;
+    padding: 8px 16px;
+    background-color: #FF4C34;
+}
+
+.form-display{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 52px;
+}
+
+.field {
+    flex: 1 1 45%;
+}
+
+.last-field{
+    flex: 1 100%;
+}
+
+
+.field select,
+.last-field textarea,
+.field input {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    padding: 6px 8px 6px 16px;
+    border: none;
+    background: hsl(0, 0%, 90%);
+}
+
+.last-field textarea{
+    height: 157px;
+    margin-bottom: 40px;
+}
+
+.file-input{
+    display: none;
+}
+
+.files{
+    display: flex;
+    gap: 52px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.file button{
+    border-radius: 100px;
+    padding: 8px 16px;
+    background-color: #FF4C34;
+    color: white;
+}

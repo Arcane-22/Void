@@ -1,7 +1,14 @@
 import TeacherCard from "./components/TeacherCard"
 import whiteLogo from './assets/Logos_white.svg'
+import { useNavigate } from "react-router-dom"
+import googleLogo from './assets/google.svg'
 
 function Login() {
+  const navigate = useNavigate()
+
+  const handleSignIn= ()=>{
+    navigate('/')
+  }
   return (
     <main className="login-page">
       <div className="login-container">
@@ -23,7 +30,7 @@ function Login() {
         <h3>Welcome Back</h3>
 
         <form method="post" action="/login" className="login-form">
-
+          <div className="login-field">
           <label htmlFor="email">Email</label>
           <input
             id="email"
@@ -31,7 +38,8 @@ function Login() {
             placeholder="Enter your Email"
             required
           />
-
+          </div>
+          <div className="login-field">
           <label htmlFor="password">Password</label>
           <input
             id="password"
@@ -39,28 +47,29 @@ function Login() {
             placeholder="Enter your password"
             required
           />
-
+          </div>
           <div className="form-options">
-            <label>
+            <label className="remember-label">
               <input type="checkbox" name="remember" />
               Remember me
             </label>
-            <a href="/forgot-password">Forgot password?</a>
+            <a href="/forgot-password" className="forgot">Forgot password?</a>
           </div>
 
-          <button type="submit">Sign In</button>
+          <button type="submit" className="in-btn" onClick= {handleSignIn}>Sign In</button>
 
         </form>
 
-        <div className="divider"><span>or</span></div>
+        <div className="login-bottom">
+          <div className="divider"><span>or</span></div>
 
-        <a href="/auth/google" className="google-btn">
-          <img src="/icons/google.svg" alt="" aria-hidden="true" />
-          Sign In with Google
-        </a>
+          <a href="#" className="google-btn">
+            <img src={googleLogo} alt="" aria-hidden="true" />
+            Sign In with Google
+          </a>
 
-        <p>Don't have an account? <a href="/register" className="register">Register</a></p>
-
+          <p>Don't have an account? <a href="/register" className="register">Register</a></p>
+        </div>
       </section>
       </div>
     </main>
