@@ -1,6 +1,7 @@
 import TeacherCard from "./components/TeacherCard"
 import whiteLogo from './assets/Logos_white.svg'
 import googleLogo from './assets/google.svg'
+import { Link } from "react-router-dom"
 
 function Register() {
   return (
@@ -91,7 +92,7 @@ function Register() {
             Continue with Google
           </a>
 
-          <p>Already have an account? <a href="/login" className="register">Login</a></p>
+          <p>Already have an account? <Link to="/login" className="register">Login</Link></p>
         </div>
       </section>
       </div>

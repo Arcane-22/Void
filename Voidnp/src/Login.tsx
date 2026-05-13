@@ -1,6 +1,6 @@
 import TeacherCard from "./components/TeacherCard"
 import whiteLogo from './assets/Logos_white.svg'
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import googleLogo from './assets/google.svg'
 
 function Login() {
@@ -68,7 +68,7 @@ function Login() {
             Sign In with Google
           </a>
 
-          <p>Don't have an account? <a href="/register" className="register">Register</a></p>
+          <p>Don't have an account? <Link to="/register" className="register">Register</Link></p>
         </div>
       </section>
       </div>
