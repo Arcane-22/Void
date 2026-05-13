@@ -3,7 +3,7 @@ import { useEffect } from "react"
 export function useCursorTrail() {
   useEffect(() => {
     const NUM = 20
-    const BASE_COLOR = [255, 140, 0]
+    const BASE_COLOR = [255, 0, 0]
     const EDGE = 120
     const INTERACTIVE = "button, a, input, select, textarea"
 
