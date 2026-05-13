@@ -1,12 +1,25 @@
 import "../css/ProfessionalForm.css";
 
-type Props = { onNext: () => void; onBack: () => void; };
+type Props = {
+  onNext: () => void;
+  onBack: () => void;
+  onSave: (data: any) => void;
+};
 
-const ProfessionalForm = ({ onNext, onBack }: Props) => {
+const ProfessionalForm = ({ onNext, onBack, onSave }: Props) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = new FormData(e.currentTarget);
+    const values = Object.fromEntries(form.entries());
+
+    onSave(values);
+    onNext();
+  };
   return (
     <section className="form-section">
       <h3 className="form-title">Professional Information</h3>
-      <form className="verification-form" onSubmit={(e) => { e.preventDefault(); onNext(); }}>
+      <form className="verification-form" onSubmit={handleSubmit}>
         <div className="form-display">
 
           <div className="pro-field">

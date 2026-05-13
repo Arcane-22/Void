@@ -7,6 +7,33 @@ import ReviewForm from "../Verification/ReviewForm";
 const VerificationPage = () => {
   const [step, setStep] = useState(1);
 
+  const [formData, setFormData] = useState({
+    personal: {},
+    professional: {},
+    documents: {},
+  });
+
+  const updatePersonal = (data: any) => {
+    setFormData((prev) => ({
+      ...prev,
+      personal: data,
+    }));
+  };
+
+  const updateProfessional = (data: any) => {
+    setFormData((prev) => ({
+      ...prev,
+      professional: data,
+    }));
+  };
+
+  const updateDocuments = (data: any) => {
+    setFormData((prev) => ({
+      ...prev,
+      documents: data,
+    }));
+  };
+
   return (
     <main className="verify-page">
       <nav className="stepper">
@@ -30,10 +57,35 @@ const VerificationPage = () => {
         </ol>
       </nav>
 
-      {step === 1 && <PersonalForm onNext={() => setStep(2)} />}
-      {step === 2 && <ProfessionalForm onNext={() => setStep(3)} onBack={() => setStep(1)} />}
-      {step === 3 && <DocumentsForm onNext={() => setStep(4)} onBack={() => setStep(2)} />}
-      {step === 4 && <ReviewForm onBack={() => setStep(3)} />}
+      {step === 1 && (
+        <PersonalForm
+          onNext={() => setStep(2)}
+          onSave={updatePersonal}
+        />
+      )}
+
+      {step === 2 && (
+        <ProfessionalForm
+          onNext={() => setStep(3)}
+          onBack={() => setStep(1)}
+          onSave={updateProfessional}
+        />
+      )}
+
+      {step === 3 && (
+        <DocumentsForm
+          onNext={() => setStep(4)}
+          onBack={() => setStep(2)}
+          onSave={updateDocuments}
+        />
+      )}
+
+      {step === 4 && (
+        <ReviewForm
+          onBack={() => setStep(3)}
+          data={formData}
+        />
+      )}
     </main>
   );
 };

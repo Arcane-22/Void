@@ -1,15 +1,24 @@
-// src/components/verification/PersonalForm.tsx
-
 type Props = {
   onNext: () => void;
+  onSave: (data: any) => void;
 };
 
-const PersonalForm = ({ onNext }: Props) => {
+const PersonalForm = ({ onNext, onSave }: Props) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = new FormData(e.currentTarget);
+    const values = Object.fromEntries(form.entries());
+
+    onSave(values);
+    onNext();
+  };
+
   return (
     <section className="form-section">
       <h3 className="form-title">Personal Information</h3>
 
-      <form className="verification-form" onSubmit={(e) => { e.preventDefault(); onNext(); }}>
+      <form className="verification-form" onSubmit={handleSubmit}>
         <div className="form-fields">
 
           <div className="form-field">

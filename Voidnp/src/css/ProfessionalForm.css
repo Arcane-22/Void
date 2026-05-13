@@ -79,3 +79,20 @@ align-items: stretch;
     background-color: #FF4C34;
     color: white;
 }
+
+.file-list{
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+}
+
+
+.file-list li{
+    border: 1px solid #FF4C34;
+    border-radius: 10px;
+    padding: 8px;
+    max-width: 50%;
+    min-width: 118px;
+}
