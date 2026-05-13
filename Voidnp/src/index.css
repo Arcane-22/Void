@@ -1023,6 +1023,7 @@ width: 100%;
 padding: 6px 16px;
 border-radius: 8px;
 border: none;
+background-color: hsl(0, 0%, 90%);
 }
 
 .field label{
